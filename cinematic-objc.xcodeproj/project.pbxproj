@@ -14,6 +14,11 @@
 		2129BD2A1FCF103C0039C41C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2129BD291FCF103C0039C41C /* Assets.xcassets */; };
 		2129BD2D1FCF103C0039C41C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2129BD2B1FCF103C0039C41C /* LaunchScreen.storyboard */; };
 		2129BD381FCF103C0039C41C /* cinematic_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD371FCF103C0039C41C /* cinematic_objcTests.m */; };
+		2129BD441FCF11FB0039C41C /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD431FCF11FB0039C41C /* SearchTableViewController.m */; };
+		2129BD471FCF13280039C41C /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD461FCF13280039C41C /* Movie.m */; };
+		2129BD4A1FCF3F610039C41C /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD491FCF3F610039C41C /* MovieTableViewCell.m */; };
+		2745663DE9AD4566EC8B8720 /* libPods-cinematic-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2565CF2434E5F1E48E5DF6B7 /* libPods-cinematic-objc.a */; };
+		A20286A2DDAD559AC0BBF9A6 /* libPods-cinematic-objcTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CFC6175417F57FB2BDA3ECA /* libPods-cinematic-objcTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		116CD5455E01C275661808FB /* Pods-cinematic-objcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinematic-objcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cinematic-objcTests/Pods-cinematic-objcTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2129BD1A1FCF103C0039C41C /* cinematic-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cinematic-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2129BD1E1FCF103C0039C41C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2129BD201FCF103C0039C41C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -40,6 +46,17 @@
 		2129BD331FCF103C0039C41C /* cinematic-objcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cinematic-objcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2129BD371FCF103C0039C41C /* cinematic_objcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cinematic_objcTests.m; sourceTree = "<group>"; };
 		2129BD391FCF103C0039C41C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2129BD421FCF11FB0039C41C /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		2129BD431FCF11FB0039C41C /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
+		2129BD451FCF13280039C41C /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		2129BD461FCF13280039C41C /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		2129BD481FCF3F610039C41C /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		2129BD491FCF3F610039C41C /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		2565CF2434E5F1E48E5DF6B7 /* libPods-cinematic-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cinematic-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CFC6175417F57FB2BDA3ECA /* libPods-cinematic-objcTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cinematic-objcTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5317D204396D4E4FE75FD79C /* Pods-cinematic-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinematic-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cinematic-objc/Pods-cinematic-objc.debug.xcconfig"; sourceTree = "<group>"; };
+		56FAAFEB4E4F35C10BFD1C3A /* Pods-cinematic-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinematic-objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-cinematic-objc/Pods-cinematic-objc.release.xcconfig"; sourceTree = "<group>"; };
+		E6A8AF5A8FBCDACC34326A68 /* Pods-cinematic-objcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinematic-objcTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-cinematic-objcTests/Pods-cinematic-objcTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2745663DE9AD4566EC8B8720 /* libPods-cinematic-objc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20286A2DDAD559AC0BBF9A6 /* libPods-cinematic-objcTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +85,8 @@
 				2129BD1C1FCF103C0039C41C /* cinematic-objc */,
 				2129BD361FCF103C0039C41C /* cinematic-objcTests */,
 				2129BD1B1FCF103C0039C41C /* Products */,
+				C21C9C2B34A1799857AC1B22 /* Pods */,
+				5C2205B13B6D00A238E7307B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +107,12 @@
 				2129BD231FCF103C0039C41C /* ViewController.h */,
 				2129BD241FCF103C0039C41C /* ViewController.m */,
 				2129BD261FCF103C0039C41C /* Main.storyboard */,
+				2129BD481FCF3F610039C41C /* MovieTableViewCell.h */,
+				2129BD491FCF3F610039C41C /* MovieTableViewCell.m */,
+				2129BD421FCF11FB0039C41C /* SearchTableViewController.h */,
+				2129BD431FCF11FB0039C41C /* SearchTableViewController.m */,
+				2129BD451FCF13280039C41C /* Movie.h */,
+				2129BD461FCF13280039C41C /* Movie.m */,
 				2129BD291FCF103C0039C41C /* Assets.xcassets */,
 				2129BD2B1FCF103C0039C41C /* LaunchScreen.storyboard */,
 				2129BD2E1FCF103C0039C41C /* Info.plist */,
@@ -111,6 +138,26 @@
 			path = "cinematic-objcTests";
 			sourceTree = "<group>";
 		};
+		5C2205B13B6D00A238E7307B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2565CF2434E5F1E48E5DF6B7 /* libPods-cinematic-objc.a */,
+				4CFC6175417F57FB2BDA3ECA /* libPods-cinematic-objcTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C21C9C2B34A1799857AC1B22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5317D204396D4E4FE75FD79C /* Pods-cinematic-objc.debug.xcconfig */,
+				56FAAFEB4E4F35C10BFD1C3A /* Pods-cinematic-objc.release.xcconfig */,
+				116CD5455E01C275661808FB /* Pods-cinematic-objcTests.debug.xcconfig */,
+				E6A8AF5A8FBCDACC34326A68 /* Pods-cinematic-objcTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2129BD3C1FCF103C0039C41C /* Build configuration list for PBXNativeTarget "cinematic-objc" */;
 			buildPhases = (
+				4762D2BBB5A69D285CE48488 /* [CP] Check Pods Manifest.lock */,
 				2129BD161FCF103C0039C41C /* Sources */,
 				2129BD171FCF103C0039C41C /* Frameworks */,
 				2129BD181FCF103C0039C41C /* Resources */,
+				26EBDCD3EA2F5882CF3C31DB /* [CP] Embed Pods Frameworks */,
+				D1862D49CFC188386784B8D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2129BD3F1FCF103C0039C41C /* Build configuration list for PBXNativeTarget "cinematic-objcTests" */;
 			buildPhases = (
+				D5CE99355127551E15F4267F /* [CP] Check Pods Manifest.lock */,
 				2129BD2F1FCF103C0039C41C /* Sources */,
 				2129BD301FCF103C0039C41C /* Frameworks */,
 				2129BD311FCF103C0039C41C /* Resources */,
+				A84A9A9AC6110B884C8777F6 /* [CP] Embed Pods Frameworks */,
+				A9F6E5E9D1E976BCA50B8A68 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +263,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26EBDCD3EA2F5882CF3C31DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cinematic-objc/Pods-cinematic-objc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4762D2BBB5A69D285CE48488 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cinematic-objc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A84A9A9AC6110B884C8777F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cinematic-objcTests/Pods-cinematic-objcTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9F6E5E9D1E976BCA50B8A68 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cinematic-objcTests/Pods-cinematic-objcTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1862D49CFC188386784B8D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cinematic-objc/Pods-cinematic-objc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5CE99355127551E15F4267F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cinematic-objcTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2129BD161FCF103C0039C41C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -217,7 +369,10 @@
 			files = (
 				2129BD251FCF103C0039C41C /* ViewController.m in Sources */,
 				2129BD221FCF103C0039C41C /* AppDelegate.m in Sources */,
+				2129BD471FCF13280039C41C /* Movie.m in Sources */,
 				2129BD1F1FCF103C0039C41C /* main.m in Sources */,
+				2129BD4A1FCF3F610039C41C /* MovieTableViewCell.m in Sources */,
+				2129BD441FCF11FB0039C41C /* SearchTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +506,7 @@
 		};
 		2129BD3D1FCF103C0039C41C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5317D204396D4E4FE75FD79C /* Pods-cinematic-objc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2QRAF9G7R5;
@@ -363,6 +519,7 @@
 		};
 		2129BD3E1FCF103C0039C41C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56FAAFEB4E4F35C10BFD1C3A /* Pods-cinematic-objc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2QRAF9G7R5;
@@ -375,6 +532,7 @@
 		};
 		2129BD401FCF103C0039C41C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 116CD5455E01C275661808FB /* Pods-cinematic-objcTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2QRAF9G7R5;
@@ -388,6 +546,7 @@
 		};
 		2129BD411FCF103C0039C41C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6A8AF5A8FBCDACC34326A68 /* Pods-cinematic-objcTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2QRAF9G7R5;
@@ -418,6 +577,7 @@
 				2129BD3E1FCF103C0039C41C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2129BD3F1FCF103C0039C41C /* Build configuration list for PBXNativeTarget "cinematic-objcTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +586,7 @@
 				2129BD411FCF103C0039C41C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
