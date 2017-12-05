@@ -11,14 +11,17 @@
 
 @interface Movie : NSObject
 
-@property (strong) NSNumber *uid;
-@property (strong) NSString *title;
-@property (strong) NSString *posterPath;
-@property (strong) NSDate *releaseDate;
+@property NSNumber *uid;
+@property NSString *title;
+@property NSString *posterPath;
+@property NSDate *releaseDate;
+@property NSString *overview;
 
 - (id)initWithJSON:(NSDictionary*)json;
-- (void)getImageWithCompletion:(void (^)(NSError *error, UIImage *image))completion;
+- (void)getSmallImageWithCompletion:(void (^)(NSError *error, UIImage *image))completion;
+- (void)getLargeImageWithCompletion:(void (^)(NSError *error, UIImage *image))completion;
 
 + (void)search:(NSString*)query completion:(void (^)(NSError *error, NSArray *results))completion;
++ (void)getPopularMoviesWithCompletion:(void (^)(NSError *error, NSArray *results))completion;
 
 @end

@@ -8,7 +8,7 @@ target 'cinematic-objc' do
   # Pods for cinematic-objc
 
   pod 'AFNetworking'
-
+  
   target 'cinematic-objcTests' do
     inherit! :search_paths
     # Pods for testing

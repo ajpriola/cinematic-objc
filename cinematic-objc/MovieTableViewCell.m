@@ -32,7 +32,7 @@
     NSInteger year = [[NSCalendar currentCalendar] component:NSCalendarUnitYear fromDate:movie.releaseDate];
     [self.yearLabel setText:[NSString stringWithFormat:@"%ld", year]];
     
-    [self.movie getImageWithCompletion:^(NSError *error, UIImage *image) {
+    [self.movie getSmallImageWithCompletion:^(NSError *error, UIImage *image) {
         if (image) {
             [self.posterImageView setImage:image];
         }

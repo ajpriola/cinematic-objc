@@ -9,6 +9,7 @@
 #import "SearchTableViewController.h"
 #import "Movie.h"
 #import "MovieTableViewCell.h"
+#import "MovieDetailTableViewController.h"
 
 @interface SearchTableViewController ()
 
@@ -53,6 +54,20 @@ NSString * const kMovieCellReuseIdentifier = @"movieCell";
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (self.results.count < 1) {
+        CGRect labelFrame = CGRectMake(0, 0, self.tableView.bounds.size.width, self.tableView.bounds.size.height);
+        UILabel *emptyLabel = [[UILabel alloc] initWithFrame:labelFrame];
+        
+        [emptyLabel setText:@"Search for a movie!"];
+        [emptyLabel setTextAlignment:NSTextAlignmentCenter];
+        [emptyLabel sizeToFit];
+        
+        [self.tableView setBackgroundView:emptyLabel];
+    } else {
+        [self.tableView setBackgroundView:nil];
+    }
+    
     return self.results.count;
 }
 
@@ -61,6 +76,18 @@ NSString * const kMovieCellReuseIdentifier = @"movieCell";
     MovieTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMovieCellReuseIdentifier forIndexPath:indexPath];
     [cell setMovie:[self.results objectAtIndex:indexPath.row]];
     return cell;
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue destinationViewController] isKindOfClass:[MovieDetailTableViewController class]]) {
+        MovieDetailTableViewController *destination = [segue destinationViewController];
+        Movie *selectedMovie = [_results objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        if (selectedMovie) {
+            [destination setMovie:selectedMovie];
+        }
+    }
 }
 
 @end

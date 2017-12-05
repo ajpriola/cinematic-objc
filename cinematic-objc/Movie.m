@@ -12,15 +12,16 @@
 
 @implementation Movie
 
-static const NSString *get = @"https://api.themoviedb.org/3/movie/";
 static NSString * const kSearchEndpoint = @"https://api.themoviedb.org/3/search/movie";
 static NSString * const kImageEndpoint = @"https://image.tmdb.org/t/p/";
+static NSString * const kPopularEndpoint = @"https://api.themoviedb.org/3/movie/popular";
 
 - (id)initWithJSON:(NSDictionary*)json {
     if (self == [super init]) {
         self.uid = [json objectForKey:@"id"];
         self.title = [json objectForKey:@"title"];
         self.posterPath = [json objectForKey:@"poster_path"];
+        self.overview = [json objectForKey:@"overview"];
         
         NSString *dateString = [json objectForKey:@"release_date"];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -31,8 +32,18 @@ static NSString * const kImageEndpoint = @"https://image.tmdb.org/t/p/";
     return self;
 }
 
-- (void)getImageWithCompletion:(void (^)(NSError *error, UIImage *image))completion {
+- (void)getSmallImageWithCompletion:(void (^)(NSError *error, UIImage *image))completion {
     NSString *url = [NSString stringWithFormat:@"%@w92%@", kImageEndpoint, self.posterPath];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:url]];
+    [[AFImageDownloader defaultInstance] downloadImageForURLRequest:request success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
+        completion(nil, responseObject);
+    } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
+        completion(error, nil);
+    }];
+}
+
+- (void)getLargeImageWithCompletion:(void (^)(NSError *error, UIImage *image))completion {
+    NSString *url = [NSString stringWithFormat:@"%@w500%@", kImageEndpoint, self.posterPath];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:url]];
     [[AFImageDownloader defaultInstance] downloadImageForURLRequest:request success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull responseObject) {
         completion(nil, responseObject);
@@ -58,6 +69,24 @@ static NSString * const kImageEndpoint = @"https://image.tmdb.org/t/p/";
         }];
     } else {
         NSLog(@"No API Key found");
+    }
+}
+
++ (void)getPopularMoviesWithCompletion:(void (^)(NSError *, NSArray *))completion {
+    NSString *key = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"API Key"];
+    if (key) {
+        NSDictionary *parameters = @{@"api_key" : key};
+        [[AFHTTPSessionManager manager] POST:kPopularEndpoint parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                NSMutableArray *movies = [[NSMutableArray alloc] init];
+                for (NSDictionary *json in [responseObject objectForKey:@"results"]) {
+                    [movies addObject:[[Movie alloc] initWithJSON:json]];
+                }
+                completion(nil, movies);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            completion(error, nil);
+        }];
     }
 }
 

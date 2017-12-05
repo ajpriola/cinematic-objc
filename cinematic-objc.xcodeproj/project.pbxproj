@@ -17,6 +17,9 @@
 		2129BD441FCF11FB0039C41C /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD431FCF11FB0039C41C /* SearchTableViewController.m */; };
 		2129BD471FCF13280039C41C /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD461FCF13280039C41C /* Movie.m */; };
 		2129BD4A1FCF3F610039C41C /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD491FCF3F610039C41C /* MovieTableViewCell.m */; };
+		2129BD4D1FD0C13A0039C41C /* MovieDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD4C1FD0C13A0039C41C /* MovieDetailTableViewController.m */; };
+		2129BD501FD0C79A0039C41C /* PopularCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD4F1FD0C79A0039C41C /* PopularCollectionViewController.m */; };
+		2129BD531FD0CECE0039C41C /* PopularCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD521FD0CECE0039C41C /* PopularCollectionViewCell.m */; };
 		2745663DE9AD4566EC8B8720 /* libPods-cinematic-objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2565CF2434E5F1E48E5DF6B7 /* libPods-cinematic-objc.a */; };
 		A20286A2DDAD559AC0BBF9A6 /* libPods-cinematic-objcTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CFC6175417F57FB2BDA3ECA /* libPods-cinematic-objcTests.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,12 @@
 		2129BD461FCF13280039C41C /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		2129BD481FCF3F610039C41C /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
 		2129BD491FCF3F610039C41C /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		2129BD4B1FD0C13A0039C41C /* MovieDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailTableViewController.h; sourceTree = "<group>"; };
+		2129BD4C1FD0C13A0039C41C /* MovieDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailTableViewController.m; sourceTree = "<group>"; };
+		2129BD4E1FD0C79A0039C41C /* PopularCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularCollectionViewController.h; sourceTree = "<group>"; };
+		2129BD4F1FD0C79A0039C41C /* PopularCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularCollectionViewController.m; sourceTree = "<group>"; };
+		2129BD511FD0CECE0039C41C /* PopularCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopularCollectionViewCell.h; sourceTree = "<group>"; };
+		2129BD521FD0CECE0039C41C /* PopularCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopularCollectionViewCell.m; sourceTree = "<group>"; };
 		2565CF2434E5F1E48E5DF6B7 /* libPods-cinematic-objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cinematic-objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFC6175417F57FB2BDA3ECA /* libPods-cinematic-objcTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cinematic-objcTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5317D204396D4E4FE75FD79C /* Pods-cinematic-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinematic-objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cinematic-objc/Pods-cinematic-objc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,10 +116,16 @@
 				2129BD231FCF103C0039C41C /* ViewController.h */,
 				2129BD241FCF103C0039C41C /* ViewController.m */,
 				2129BD261FCF103C0039C41C /* Main.storyboard */,
+				2129BD511FD0CECE0039C41C /* PopularCollectionViewCell.h */,
+				2129BD521FD0CECE0039C41C /* PopularCollectionViewCell.m */,
+				2129BD4E1FD0C79A0039C41C /* PopularCollectionViewController.h */,
+				2129BD4F1FD0C79A0039C41C /* PopularCollectionViewController.m */,
 				2129BD481FCF3F610039C41C /* MovieTableViewCell.h */,
 				2129BD491FCF3F610039C41C /* MovieTableViewCell.m */,
 				2129BD421FCF11FB0039C41C /* SearchTableViewController.h */,
 				2129BD431FCF11FB0039C41C /* SearchTableViewController.m */,
+				2129BD4B1FD0C13A0039C41C /* MovieDetailTableViewController.h */,
+				2129BD4C1FD0C13A0039C41C /* MovieDetailTableViewController.m */,
 				2129BD451FCF13280039C41C /* Movie.h */,
 				2129BD461FCF13280039C41C /* Movie.m */,
 				2129BD291FCF103C0039C41C /* Assets.xcassets */,
@@ -370,8 +385,11 @@
 				2129BD251FCF103C0039C41C /* ViewController.m in Sources */,
 				2129BD221FCF103C0039C41C /* AppDelegate.m in Sources */,
 				2129BD471FCF13280039C41C /* Movie.m in Sources */,
+				2129BD4D1FD0C13A0039C41C /* MovieDetailTableViewController.m in Sources */,
 				2129BD1F1FCF103C0039C41C /* main.m in Sources */,
 				2129BD4A1FCF3F610039C41C /* MovieTableViewCell.m in Sources */,
+				2129BD501FD0C79A0039C41C /* PopularCollectionViewController.m in Sources */,
+				2129BD531FD0CECE0039C41C /* PopularCollectionViewCell.m in Sources */,
 				2129BD441FCF11FB0039C41C /* SearchTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
