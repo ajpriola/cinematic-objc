@@ -7,6 +7,7 @@
 //
 
 #import "Movie.h"
+#import "Review.h"
 #import <AFNetworking.h>
 #import <AFNetworking/AFImageDownloader.h>
 
@@ -15,6 +16,7 @@
 static NSString * const kSearchEndpoint = @"https://api.themoviedb.org/3/search/movie";
 static NSString * const kImageEndpoint = @"https://image.tmdb.org/t/p/";
 static NSString * const kPopularEndpoint = @"https://api.themoviedb.org/3/movie/popular";
+static NSString * const kReviewEndpint = @"https://api.themoviedb.org/3/movie/11/reviews";
 
 - (id)initWithJSON:(NSDictionary*)json {
     if (self == [super init]) {
@@ -30,6 +32,27 @@ static NSString * const kPopularEndpoint = @"https://api.themoviedb.org/3/movie/
     }
     
     return self;
+}
+
+- (void)getReviewsWithCompletion:(void (^)(NSError *error, NSArray *reviews))completion {
+    NSString *url = [NSString stringWithFormat:@"https://api.themoviedb.org/3/movie/%@/reviews", self.uid];
+    NSString *key = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"API Key"];
+    if (key) {
+        NSDictionary *parameters = @{@"api_key" : key};
+        [[AFHTTPSessionManager manager] POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if ([responseObject isKindOfClass:[NSDictionary class]]) {
+                NSMutableArray *reviews = [[NSMutableArray alloc] init];
+                for (NSDictionary *json in [responseObject objectForKey:@"results"]) {
+                    [reviews addObject:[[Review alloc] initWithJSON:json]];
+                }
+                completion(nil, reviews);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            completion(error, nil);
+        }];
+    } else {
+        NSLog(@"No API Key found");
+    }
 }
 
 - (void)getSmallImageWithCompletion:(void (^)(NSError *error, UIImage *image))completion {

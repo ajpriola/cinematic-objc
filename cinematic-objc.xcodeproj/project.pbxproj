@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2126F9FF1FD720B60005893E /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 2126F9FE1FD720B60005893E /* Review.m */; };
+		2126FA021FD723050005893E /* ReviewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2126FA011FD723050005893E /* ReviewsTableViewController.m */; };
+		2126FA051FD723240005893E /* ReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2126FA041FD723240005893E /* ReviewTableViewCell.m */; };
 		2129BD1F1FCF103C0039C41C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD1E1FCF103C0039C41C /* main.m */; };
 		2129BD221FCF103C0039C41C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD211FCF103C0039C41C /* AppDelegate.m */; };
-		2129BD251FCF103C0039C41C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2129BD241FCF103C0039C41C /* ViewController.m */; };
 		2129BD281FCF103C0039C41C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2129BD261FCF103C0039C41C /* Main.storyboard */; };
 		2129BD2A1FCF103C0039C41C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2129BD291FCF103C0039C41C /* Assets.xcassets */; };
 		2129BD2D1FCF103C0039C41C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2129BD2B1FCF103C0039C41C /* LaunchScreen.storyboard */; };
@@ -36,12 +38,16 @@
 
 /* Begin PBXFileReference section */
 		116CD5455E01C275661808FB /* Pods-cinematic-objcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cinematic-objcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cinematic-objcTests/Pods-cinematic-objcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2126F9FD1FD720B60005893E /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		2126F9FE1FD720B60005893E /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
+		2126FA001FD723050005893E /* ReviewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsTableViewController.h; sourceTree = "<group>"; };
+		2126FA011FD723050005893E /* ReviewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableViewController.m; sourceTree = "<group>"; };
+		2126FA031FD723240005893E /* ReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTableViewCell.h; sourceTree = "<group>"; };
+		2126FA041FD723240005893E /* ReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTableViewCell.m; sourceTree = "<group>"; };
 		2129BD1A1FCF103C0039C41C /* cinematic-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cinematic-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2129BD1E1FCF103C0039C41C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2129BD201FCF103C0039C41C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2129BD211FCF103C0039C41C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2129BD231FCF103C0039C41C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2129BD241FCF103C0039C41C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2129BD271FCF103C0039C41C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2129BD291FCF103C0039C41C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2129BD2C1FCF103C0039C41C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,9 +119,11 @@
 			children = (
 				2129BD201FCF103C0039C41C /* AppDelegate.h */,
 				2129BD211FCF103C0039C41C /* AppDelegate.m */,
-				2129BD231FCF103C0039C41C /* ViewController.h */,
-				2129BD241FCF103C0039C41C /* ViewController.m */,
 				2129BD261FCF103C0039C41C /* Main.storyboard */,
+				2126FA031FD723240005893E /* ReviewTableViewCell.h */,
+				2126FA041FD723240005893E /* ReviewTableViewCell.m */,
+				2126FA001FD723050005893E /* ReviewsTableViewController.h */,
+				2126FA011FD723050005893E /* ReviewsTableViewController.m */,
 				2129BD511FD0CECE0039C41C /* PopularCollectionViewCell.h */,
 				2129BD521FD0CECE0039C41C /* PopularCollectionViewCell.m */,
 				2129BD4E1FD0C79A0039C41C /* PopularCollectionViewController.h */,
@@ -128,6 +136,8 @@
 				2129BD4C1FD0C13A0039C41C /* MovieDetailTableViewController.m */,
 				2129BD451FCF13280039C41C /* Movie.h */,
 				2129BD461FCF13280039C41C /* Movie.m */,
+				2126F9FD1FD720B60005893E /* Review.h */,
+				2126F9FE1FD720B60005893E /* Review.m */,
 				2129BD291FCF103C0039C41C /* Assets.xcassets */,
 				2129BD2B1FCF103C0039C41C /* LaunchScreen.storyboard */,
 				2129BD2E1FCF103C0039C41C /* Info.plist */,
@@ -382,15 +392,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2129BD251FCF103C0039C41C /* ViewController.m in Sources */,
 				2129BD221FCF103C0039C41C /* AppDelegate.m in Sources */,
+				2126FA021FD723050005893E /* ReviewsTableViewController.m in Sources */,
 				2129BD471FCF13280039C41C /* Movie.m in Sources */,
 				2129BD4D1FD0C13A0039C41C /* MovieDetailTableViewController.m in Sources */,
 				2129BD1F1FCF103C0039C41C /* main.m in Sources */,
 				2129BD4A1FCF3F610039C41C /* MovieTableViewCell.m in Sources */,
 				2129BD501FD0C79A0039C41C /* PopularCollectionViewController.m in Sources */,
 				2129BD531FD0CECE0039C41C /* PopularCollectionViewCell.m in Sources */,
+				2126FA051FD723240005893E /* ReviewTableViewCell.m in Sources */,
 				2129BD441FCF11FB0039C41C /* SearchTableViewController.m in Sources */,
+				2126F9FF1FD720B60005893E /* Review.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

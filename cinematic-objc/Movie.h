@@ -20,6 +20,7 @@
 - (id)initWithJSON:(NSDictionary*)json;
 - (void)getSmallImageWithCompletion:(void (^)(NSError *error, UIImage *image))completion;
 - (void)getLargeImageWithCompletion:(void (^)(NSError *error, UIImage *image))completion;
+- (void)getReviewsWithCompletion:(void (^)(NSError *error, NSArray *reviews))completion;
 
 + (void)search:(NSString*)query completion:(void (^)(NSError *error, NSArray *results))completion;
 + (void)getPopularMoviesWithCompletion:(void (^)(NSError *error, NSArray *results))completion;
